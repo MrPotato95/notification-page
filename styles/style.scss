@@ -1,4 +1,4 @@
-@import "reset.scss";
+@use "reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
 
 // Colors
@@ -7,7 +7,7 @@ $clr-red: hsl(1, 90%, 65%);
 $clr-blue: hsl(219, 85%, 26%);
 
 $clr-white: hsl(0, 0%, 100%);
-$clr-very-light-grayish-blue: hsl(210, 60%, 98%);
+$clr-very-light-grayish-blue: hsl(210, 60%, 96%);
 $clr-light-grayish-blue-1: hsl(211, 68%, 94%);
 $clr-light-grayish-blue-2: hsl(205, 33%, 90%);
 $clr-grayish-blue: hsl(219, 14%, 63%);
@@ -30,3 +30,179 @@ $fs-500: 1.5rem;
 $fs-600: 2rem;
 $fs-700: 2.4rem;
 $fs-800: 3rem;
+
+body {
+  background-color: $clr-light-grayish-blue-1;
+  font-family: $ff-default;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+}
+
+main {
+  
+  width: 732px;
+  padding: 5px 30px;
+  margin: 50px 300px;
+  background-color: $clr-white;
+  border-radius: 8px;
+
+  & section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      h1 {
+        font-size: $fs-400;
+        margin-right: 10px;
+      }
+
+      span {
+        font-size: $fs-300;
+        background-color: $clr-blue;
+        padding: 2px 8px;
+        text-align: center;
+        color: $clr-white;
+        border-radius: 8px;
+      }
+    }
+
+    button {
+      outline: none;
+      border: none;
+      background-color: $clr-white;
+      font-size: $fs-100;
+      color: $clr-dark-grayish-blue;
+    }
+
+    button:hover {
+      cursor: pointer;
+      color: $clr-blue;
+    }
+  }
+
+  section {
+    .bg-blue {
+      background-color: $clr-very-light-grayish-blue;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+
+    img {
+      width: 45px;
+      margin-right: 10px;
+    }
+
+    #chess-img {
+      margin-left: 180px;
+      margin-right: 0;
+    }
+
+    .name {
+      color: $clr-very-dark-blue;
+      font-weight: $fw-800;
+      font-size: $fs-100;
+      margin-right: 5px;
+    }
+
+    .name:hover {
+      cursor: pointer;
+      color: $clr-blue;
+    }
+
+    p {
+      font-size: $fs-100;
+      word-wrap: normal;
+      color: $clr-dark-grayish-blue;
+    }
+
+    span {
+      font-size: $fs-100;
+      color: $clr-grayish-blue;
+    }
+
+    strong {
+      margin-left: 2px;
+      font-size: $fs-100;
+    }
+
+    strong:hover {
+      cursor: pointer;
+      color: $clr-blue;
+    }
+
+    .bullet {
+      margin-left: 10px;
+      height: 8px;
+      width: 8px;
+      background-color: $clr-red;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+}
+
+fieldset {
+  text-align: left;
+  font-size: $fs-100;
+  color: $clr-dark-grayish-blue;
+  border: 1px solid $clr-grayish-blue;
+  border-radius: 8px;
+  margin-top: -10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+fieldset:hover {
+  background-color: $clr-light-grayish-blue-1;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+@media (max-width: 768px) {
+  main {
+    background-color: $clr-white;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 10px 25px;
+    overflow: scroll;
+
+    section {
+      height: auto;
+      .container {
+        padding-left: 0;
+        padding-right: 0;
+
+        #chess-img {
+          margin-left: 1px;
+        }
+      }
+    }
+  }
+}

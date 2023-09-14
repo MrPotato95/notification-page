@@ -37,4 +37,157 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+body {
+  background-color: hsl(211, 68%, 94%);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.2;
+}
+
+main {
+  width: 732px;
+  padding: 5px 30px;
+  margin: 50px 300px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+main .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+}
+main .header div {
+  display: flex;
+  align-items: center;
+}
+main .header div h1 {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+main .header div span {
+  font-size: 1.1rem;
+  background-color: hsl(219, 85%, 26%);
+  padding: 2px 8px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  border-radius: 8px;
+}
+main .header button {
+  outline: none;
+  border: none;
+  background-color: hsl(0, 0%, 100%);
+  font-size: 0.9rem;
+  color: hsl(219, 12%, 42%);
+}
+main .header button:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+main section .bg-blue {
+  background-color: hsl(210, 60%, 96%);
+}
+main .container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+main .container img {
+  width: 45px;
+  margin-right: 10px;
+}
+main .container #chess-img {
+  margin-left: 180px;
+  margin-right: 0;
+}
+main .container .name {
+  color: hsl(224, 21%, 14%);
+  font-weight: 800;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+main .container .name:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+main .container p {
+  font-size: 0.9rem;
+  word-wrap: normal;
+  color: hsl(219, 12%, 42%);
+}
+main .container span {
+  font-size: 0.9rem;
+  color: hsl(219, 14%, 63%);
+}
+main .container strong {
+  margin-left: 2px;
+  font-size: 0.9rem;
+}
+main .container strong:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+main .container .bullet {
+  margin-left: 10px;
+  height: 8px;
+  width: 8px;
+  background-color: hsl(1, 90%, 65%);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+fieldset {
+  text-align: left;
+  font-size: 0.9rem;
+  color: hsl(219, 12%, 42%);
+  border: 1px solid hsl(219, 14%, 63%);
+  border-radius: 8px;
+  margin-top: -10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  padding: 15px;
+}
+
+fieldset:hover {
+  background-color: hsl(211, 68%, 94%);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+@media (max-width: 768px) {
+  main {
+    background-color: hsl(0, 0%, 100%);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 10px 25px;
+    overflow: scroll;
+  }
+  main section {
+    height: auto;
+  }
+  main section .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  main section .container #chess-img {
+    margin-left: 1px;
+  }
 }/*# sourceMappingURL=style.css.map */
