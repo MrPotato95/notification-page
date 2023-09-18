@@ -32,7 +32,7 @@ $fs-700: 2.4rem;
 $fs-800: 3rem;
 
 body {
-  background-color: $clr-light-grayish-blue-1;
+  background-color: $clr-very-light-grayish-blue;
   font-family: $ff-default;
   width: 100vw;
   height: 100vh;
@@ -43,9 +43,8 @@ body {
 }
 
 main {
-  
   width: 732px;
-  padding: 5px 30px;
+  padding: 5px 40px;
   margin: 50px 300px;
   background-color: $clr-white;
   border-radius: 8px;
@@ -86,7 +85,7 @@ main {
       outline: none;
       border: none;
       background-color: $clr-white;
-      font-size: $fs-100;
+      font-size: $fs-200;
       color: $clr-dark-grayish-blue;
     }
 
@@ -102,30 +101,39 @@ main {
     }
   }
 
+  .container:nth-last-child(3) {
+    display: flex;
+    div {
+      p {
+        margin-right: 110px;
+      }
+    }
+
+    #chess-img {
+      position: relative;
+      left: 80px;
+    }
+  }
+
   .container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     width: 100%;
     padding: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     border-radius: 8px;
 
     img {
       width: 45px;
-      margin-right: 10px;
-    }
-
-    #chess-img {
-      margin-left: 180px;
-      margin-right: 0;
+      margin-right: 20px;
     }
 
     .name {
       color: $clr-very-dark-blue;
       font-weight: $fw-800;
-      font-size: $fs-100;
-      margin-right: 5px;
+      font-size: $fs-200;
+      margin-right: 2px;
     }
 
     .name:hover {
@@ -134,19 +142,19 @@ main {
     }
 
     p {
-      font-size: $fs-100;
+      font-size: $fs-200;
       word-wrap: normal;
       color: $clr-dark-grayish-blue;
     }
 
     span {
-      font-size: $fs-100;
+      font-size: $fs-200;
       color: $clr-grayish-blue;
     }
 
     strong {
       margin-left: 2px;
-      font-size: $fs-100;
+      font-size: $fs-200;
     }
 
     strong:hover {
@@ -155,7 +163,7 @@ main {
     }
 
     .bullet {
-      margin-left: 10px;
+      margin-left: 5px;
       height: 8px;
       width: 8px;
       background-color: $clr-red;
@@ -167,14 +175,15 @@ main {
 
 fieldset {
   text-align: left;
-  font-size: $fs-100;
+  font-size: $fs-200;
   color: $clr-dark-grayish-blue;
   border: 1px solid $clr-grayish-blue;
-  border-radius: 8px;
+  border-radius: 4px;
+  width: 88%;
   margin-top: -10px;
-  margin-right: 10px;
-  margin-bottom: 20px;
-  margin-left: 50px;
+  line-height: 1.3;
+  margin-bottom: 40px;
+  margin-left: 75px;
   padding: 15px;
 }
 
@@ -198,11 +207,23 @@ fieldset:hover {
       .container {
         padding-left: 0;
         padding-right: 0;
+      }
+      .container:nth-last-child(3) {
+        display: flex;
+        div {
+          p {
+            margin-right: 0;
+          }
+        }
 
         #chess-img {
-          margin-left: 1px;
+          position: unset;
         }
       }
     }
+  }
+
+  fieldset {
+    margin-left: 50px;
   }
 }
